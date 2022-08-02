@@ -50,4 +50,15 @@ public class LibraryTest {
         library.addBook(book4);
         assertEquals(3, library.bookCount());
     }
+
+    @Test
+    public void libraryCanRemoveBook() {
+        Book book1 = new Book("Little Women", "Louisa May Alcott", "coming-of-age");
+        Book book2 = new Book("The Hobbit", "JRR Tolkien", "fantasy");
+        library.addBook(book1);
+        library.addBook(book2);
+        assertEquals(2, library.bookCount());
+        library.removeBook(book2);
+        assertEquals(1, library.bookCount());
+    }
 }

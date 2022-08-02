@@ -22,4 +22,8 @@ public class Library {
     public int getCapacity() {
         return capacity;
     }
+
+    public boolean removeBook(Book bookToRemove) {
+        return book.remove(bookToRemove);
+    }
 }
